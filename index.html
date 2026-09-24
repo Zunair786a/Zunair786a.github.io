@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zunair Khawaja — Assistant Accountant & BSc Business Management & Finance student. Graduate Scheme Candidate (Audit, Advisory, Tax, Commercial Finance). Interactive financial models, audit analytics, and practice case studies.">
+    <meta name="keywords" content="Zunair Khawaja, Graduate Scheme Candidate, Assistant Accountant, Audit, Corporate Finance, Deals, Tax, Practice Accounting, Financial Modelling, ACA, ACCA">
+    <meta name="author" content="Zunair Khawaja">
+    <meta property="og:title" content="Zunair Khawaja — Assistant Accountant & Graduate Candidate | Finance & Commercial Advisory">
+    <meta property="og:description" content="Explore interactive financial models, audit variance simulators, and practical accounting case studies.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero-bg.png">
+    <title>Zunair Khawaja — Assistant Accountant &amp; Graduate Candidate | Finance &amp; ACA Track</title>
+
+    <!-- Google Fonts — Outfit (modern geometric) + Playfair Display (editorial) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Page Loader -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-inner">
+            <div class="loader-logo">ZK</div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+            <span class="loader-subtext">Initialising Portfolio &amp; Financial Engine…</span>
+        </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toast-message">Copied to clipboard</span>
+    </div>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Zunair Khawaja — Home">
+                <span class="logo-text">ZK</span>
+                <span class="logo-dot"></span>
+                <span class="logo-badge">Grad 2026/27</span>
+            </a>
+
+            <div class="nav-actions-mobile">
+                <button class="nav-util-btn" id="theme-toggle-mobile" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link active" data-text="Home">Home</a></li>
+                <li><a href="#scheme-matcher" class="nav-link" data-text="Scheme Fit">Scheme Fit</a></li>
+                <li><a href="#about" class="nav-link" data-text="About &amp; Matrix">About</a></li>
+                <li><a href="#financial-lab" class="nav-link nav-link-highlight" data-text="Financial Lab">Financial Lab</a></li>
+                <li><a href="#portfolio" class="nav-link" data-text="Case Studies">Case Studies</a></li>
+                <li><a href="#blog" class="nav-link" data-text="Insights">Insights</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <!-- Theme Switcher -->
+                <button class="nav-util-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Theme (Obsidian / Mayfair Cream)">
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+
+                <!-- Acoustic Audio Feedback Toggle -->
+                <button class="nav-util-btn" id="sound-toggle" aria-label="Toggle audio feedback" title="Toggle Acoustic UI Sounds (Muted by default)">
+                    <svg class="icon-sound-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-sound-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                </button>
+
+                <!-- Fast-Track Recruiter Button -->
+                <button class="btn-recruiter-pill" id="open-recruiter-modal" aria-label="Open recruiter snapshot">
+                    <span class="pill-pulse"></span>
+                    <span class="pill-text">⚡ Recruiter Snapshot</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Floating particles -->
+        <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+
+        <!-- Decorative grid lines -->
+        <div class="hero-grid-lines" aria-hidden="true">
+            <div class="grid-line grid-line-v"></div>
+            <div class="grid-line grid-line-v"></div>
+            <div class="grid-line grid-line-h"></div>
+        </div>
+
+        <div class="hero-content">
+            <!-- Target Status Badge -->
+            <div class="hero-status-tag reveal-up">
+                <span class="status-indicator"></span>
+                <span>Actively applying for September 2027 graduate intake · Open to practice, mid-tier, and industry roles</span>
+            </div>
+
+            <h1 class="hero-name" id="hero-name">
+                <span class="name-line reveal-up" style="--delay: 0.15s">Zunair</span>
+                <span class="name-line name-line-accent reveal-up" style="--delay: 0.3s">Khawaja</span>
+            </h1>
+
+            <div class="hero-role reveal-up" style="--delay: 0.45s">
+                <span class="role-tag">Assistant Accountant</span>
+                <span class="role-divider">✦</span>
+                <span class="role-tag">BSc Business Management &amp; Finance</span>
+                <span class="role-divider">✦</span>
+                <span class="role-tag role-tag-aca">ACA Track</span>
+            </div>
+
+            <p class="hero-description reveal-up" style="--delay: 0.6s">
+                I turn messy client ledgers into clean, audit-ready numbers — and I build the tools that do it faster. Currently automating VAT compliance workflows with agentic AI at a UK accounting practice while completing my degree.
+            </p>
+
+            <!-- Recruiter Value Proposition Cards in Hero -->
+            <div class="hero-metrics-bar reveal-up" style="--delay: 0.75s">
+                <div class="hero-metric-item">
+                    <span class="h-metric-value">18 Months</span>
+                    <span class="h-metric-desc">Hands-on Practice Experience</span>
+                </div>
+                <div class="hero-metric-divider"></div>
+                <div class="hero-metric-item">
+                    <span class="h-metric-value">30+</span>
+                    <span class="h-metric-desc">VAT Returns Automated</span>
+                </div>
+                <div class="hero-metric-divider"></div>
+                <div class="hero-metric-item">
+                    <span class="h-metric-value">MTD-Compliant</span>
+                    <span class="h-metric-desc">Workflows via Claude Code</span>
+                </div>
+                <div class="hero-metric-divider"></div>
+                <div class="hero-metric-item">
+                    <span class="h-metric-value">ACA Track</span>
+                    <span class="h-metric-desc">ICAEW Self-Study Preparation</span>
+                </div>
+            </div>
+
+            <div class="hero-cta reveal-up" style="--delay: 0.9s">
+                <button class="btn-magnetic btn-primary" id="hero-recruiter-btn">
+                    <span class="btn-inner">
+                        <span class="btn-text-wrapper">
+                            <span class="btn-text">⚡ 30s Recruiter Dossier</span>
+                        </span>
+                        <span class="btn-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </span>
+                    </span>
+                </button>
+
+                <a href="#financial-lab" class="btn-magnetic btn-accent-outline" id="hero-lab-btn">
+                    <span class="btn-inner">
+                        <span class="btn-text-wrapper">
+                            <span class="btn-text">🔬 Interactive Financial Lab</span>
+                        </span>
+                        <span class="btn-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </span>
+                    </span>
+                </a>
+
+                <button class="btn-magnetic btn-ghost" id="hero-cv-btn" title="Download CV Summary">
+                    <span class="btn-inner">
+                        <span class="btn-text-wrapper">
+                            <span class="btn-text">📄 Download CV (PDF)</span>
+                        </span>
+                        <span class="btn-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-cue" aria-hidden="true">
+            <div class="scroll-line"></div>
+            <span class="scroll-label">Explore Capabilities</span>
+        </div>
+
+        <!-- Side decoration -->
+        <div class="hero-side-text" aria-hidden="true">
+            <span>Accounting · MTD VAT · Automation · ACA Track</span>
+        </div>
+    </section>
+
+    <!-- ═══ MARQUEE STRIP ═══ -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+            <span class="marquee-item">Xero &amp; MTD VAT Filing</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Agentic AI with Claude Code</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Bank Reconciliation</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">ACA Track (Self-Study)</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">St Mary's Investment Society Founder</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Excel Dynamic Arrays</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">30+ Returns Automated</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Financial Modelling Sandbox</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">HMRC Correspondence</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Client Advisory</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Xero &amp; MTD VAT Filing</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Agentic AI with Claude Code</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">Bank Reconciliation</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">ACA Track (Self-Study)</span>
+            <span class="marquee-separator">✦</span>
+            <span class="marquee-item">St Mary's Investment Society Founder</span>
+            <span class="marquee-separator">✦</span>
+        </div>
+    </div>
+
+    <!-- ═══ GRADUATE SCHEME MATCHER (INTERACTIVE RECRUITER TOOL) ═══ -->
+    <section id="scheme-matcher" class="section scheme-matcher">
+        <div class="container">
+            <div class="matcher-header text-center">
+                <span class="section-number reveal-up">01</span>
+                <span class="section-label reveal-up" style="--delay: 0.1s">Recruiter Fast Matcher</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.2s">Tailor My Profile to <em>Your Graduate Scheme</em></h2>
+                <p class="section-subtitle reveal-up" style="--delay: 0.3s">
+                    Select your graduate programme below to instantly highlight my relevant technical skills, coursework, and case studies.
+                </p>
+            </div>
+
+            <!-- Service Line Selector Buttons -->
+            <div class="scheme-tabs-wrapper reveal-up" style="--delay: 0.35s">
+                <div class="scheme-tabs" role="tablist" aria-label="Graduate Service Lines">
+                    <button class="scheme-tab active" data-scheme="all" role="tab" aria-selected="true">
+                        <span class="tab-badge">Overview</span>
+                        <span class="tab-title">All Schemes</span>
+                    </button>
+                    <button class="scheme-tab" data-scheme="audit" role="tab" aria-selected="false">
+                        <span class="tab-badge tab-badge-audit">Assurance</span>
+                        <span class="tab-title">Audit &amp; Assurance</span>
+                    </button>
+                    <button class="scheme-tab" data-scheme="deals" role="tab" aria-selected="false">
+                        <span class="tab-badge tab-badge-deals">M&amp;A / Strategy</span>
+                        <span class="tab-title">Deals &amp; Corporate Finance</span>
+                    </button>
+                    <button class="scheme-tab" data-scheme="tax" role="tab" aria-selected="false">
+                        <span class="tab-badge tab-badge-tax">Compliance</span>
+                        <span class="tab-title">Tax &amp; Legal Advisory</span>
+                    </button>
+                    <button class="scheme-tab" data-scheme="consulting" role="tab" aria-selected="false">
+                        <span class="tab-badge tab-badge-consulting">Transformation</span>
+                        <span class="tab-title">Strategy &amp; Consulting</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Match Box -->
+            <div class="scheme-match-card reveal-up" id="scheme-match-card" style="--delay: 0.45s">
+                <div class="match-card-grid">
+                    <div class="match-info">
+                        <div class="match-tag" id="match-tag">Comprehensive Commercial Fit</div>
+                        <h3 class="match-title" id="match-title">Holistic Finance &amp; Business Foundation</h3>
+                        <p class="match-narrative" id="match-narrative">
+                            Equipped with a solid blend of university-level corporate finance theory and practical commercial ledger accounting. Proven agility across statutory accounts, multi-scenario modelling, and executive stakeholder reporting.
+                        </p>
+                        <div class="match-highlights" id="match-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <div><strong>Rigorous Academic Standing:</strong> BSc Business Management &amp; Finance coursework covering Corporate Valuation, Macroeconomics, and Business Law.</div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <div><strong>Client-Facing Accountability:</strong> Direct experience managing client queries, balance sheet reconciliations, and variance analysis.</div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <div><strong>Digital Agility:</strong> Advanced Excel (Dynamic Arrays, Power Query), automated financial statements, and Power BI dashboards.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-side-panel">
+                        <div class="match-stat-box">
+                            <span class="stat-caption">Scheme Alignment Score</span>
+                            <div class="stat-score-wrapper">
+                                <span class="stat-score" id="match-score">98</span><span class="stat-score-pct">%</span>
+                            </div>
+                            <span class="stat-subtext" id="match-subtext">Strong competency alignment across graduate schemes</span>
+                        </div>
+                        <div class="match-actions">
+                            <a href="#financial-lab" class="btn-match-action" id="btn-match-action">
+                                <span>Test in Financial Lab</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                            <button class="btn-match-secondary" id="btn-match-dossier" aria-label="Open 30-second recruiter dossier">
+                                <span>30s Recruiter Dossier</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ABOUT & CORE CAPABILITIES MATRIX ═══ -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number reveal-up">02</span>
+                <span class="section-label reveal-up" style="--delay: 0.1s">Candidate Profile</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.2s">Analytical Precision,<br><em>Commercial Acumen</em></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image reveal-up" style="--delay: 0.3s">
+                    <div class="about-image-frame">
+                        <div class="about-image-placeholder">
+                            <div class="profile-monogram">ZK</div>
+                            <span class="profile-caption">Zunair Khawaja</span>
+                            <span class="profile-sub">London / UK</span>
+                            <div class="profile-badges">
+                                <span class="p-badge">ACA Track</span>
+                                <span class="p-badge">Sept 2027 Intake</span>
+                            </div>
+                        </div>
+                        <div class="image-frame-corner image-frame-tl"></div>
+                        <div class="image-frame-corner image-frame-br"></div>
+                    </div>
+
+                    <!-- Experience Badge -->
+                    <div class="about-badge">
+                        <span class="badge-number count-up" data-target="18">0</span>
+                        <span class="badge-label">Months<br>Practice Exp.</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p class="about-bio reveal-up" style="--delay: 0.3s">
+                        I'm a third-year <strong>Business Management &amp; Finance student</strong> self-studying toward the <strong>ACA</strong>, working part-time as an <strong>Assistant Accountant</strong> at a UK practice. My day-to-day covers VAT returns under Making Tax Digital, bank reconciliations, and HMRC correspondence on Xero — the unglamorous, high-precision work that keeps a practice compliant.
+                    </p>
+                    <p class="about-bio reveal-up" style="--delay: 0.4s">
+                        What I actually bring beyond that: I noticed our VAT categorisation process was repetitive and error-prone, so I built an <strong>agentic AI workflow using Claude Code</strong> to automate it. It's now been used across <strong>30+ client VAT returns</strong> and saves roughly a day of manual work a week. I also founded and now lead the <strong>St Mary's Student Investment Society</strong>, and separately started a <strong>Sports &amp; Games society</strong> from scratch.
+                    </p>
+
+                    <!-- Stats Row -->
+                    <div class="stats-row reveal-up" style="--delay: 0.5s">
+                        <div class="stat-card">
+                            <span class="stat-number count-up" data-target="18">0</span><span class="stat-suffix">m</span>
+                            <span class="stat-label">Hands-On Practice<br>Experience</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number count-up" data-target="30">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Client VAT Returns<br>Automated</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number count-up" data-target="1">0</span><span class="stat-suffix"> day/wk</span>
+                            <span class="stat-label">Manual Work Saved<br>via Claude Code</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number count-up" data-target="2">0</span>
+                            <span class="stat-label">Societies Founded<br>From Scratch</span>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="education-block reveal-up" style="--delay: 0.55s">
+                        <div class="education-card">
+                            <div class="edu-accent-line"></div>
+                            <span class="edu-date">2024 — 2027 · St Mary's University, London</span>
+                            <h3 class="edu-degree">BSc (Hons) Business Management &amp; Finance (Year 3)</h3>
+                            <p class="edu-desc">
+                                Self-studying towards the ACA (ICAEW). Academic coursework includes Financial Accounting, Corporate Finance, Management Accounting, Business Law, and Quantitative Analysis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graduate Capability Matrix -->
+            <div class="competency-matrix-section reveal-up" style="--delay: 0.6s">
+                <div class="matrix-header text-center">
+                    <span class="matrix-tag">Skills &amp; Capabilities</span>
+                    <h3 class="matrix-title">Graduate Capability Matrix</h3>
+                    <p class="matrix-desc">Verifiable practice execution, AI tool-building, and demonstrated university leadership.</p>
+                </div>
+
+                <div class="matrix-grid">
+                    <!-- Pillar 1 -->
+                    <div class="matrix-card" data-tilt>
+                        <div class="matrix-card-top">
+                            <div class="matrix-icon matrix-icon-tech">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                            </div>
+                            <span class="matrix-pillar-num">01</span>
+                        </div>
+                        <h4 class="matrix-pillar-title">Technical &amp; Digital</h4>
+                        <p class="matrix-pillar-desc">
+                            Xero, MTD VAT filing, bank reconciliation, HMRC correspondence, Excel (formulas, pivot tables), and hands-on experience building AI-assisted workflows with Claude Code to automate repetitive accounting tasks.
+                        </p>
+                        <div class="matrix-tags">
+                            <span>Xero Accounting</span>
+                            <span>MTD VAT Filing</span>
+                            <span>Claude Code AI</span>
+                            <span>Excel &amp; Pivot Tables</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="matrix-card" data-tilt>
+                        <div class="matrix-card-top">
+                            <div class="matrix-icon matrix-icon-business">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <span class="matrix-pillar-num">02</span>
+                        </div>
+                        <h4 class="matrix-pillar-title">Process Improvement</h4>
+                        <p class="matrix-pillar-desc">
+                            Identified and automated a manual VAT categorisation bottleneck — real production use across 30+ returns, ~1 day/week saved. Currently self-studying towards the ACA.
+                        </p>
+                        <div class="matrix-tags">
+                            <span>Workflow Automation</span>
+                            <span>Bottleneck Removal</span>
+                            <span>~1 Day/Wk Saved</span>
+                            <span>ACA Track</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="matrix-card" data-tilt>
+                        <div class="matrix-card-top">
+                            <div class="matrix-icon matrix-icon-lead">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="matrix-pillar-num">03</span>
+                        </div>
+                        <h4 class="matrix-pillar-title">Leadership &amp; Initiative</h4>
+                        <p class="matrix-pillar-desc">
+                            Founded and lead two university societies (Investment Society; Sports &amp; Games Society) from concept to running events — constitution, promotional material, and member recruitment handled personally.
+                        </p>
+                        <div class="matrix-tags">
+                            <span>Society Founder</span>
+                            <span>Constitution Author</span>
+                            <span>Gamma Pitch Decks</span>
+                            <span>Campus Outreach</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="matrix-card" data-tilt>
+                        <div class="matrix-card-top">
+                            <div class="matrix-icon matrix-icon-client">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <span class="matrix-pillar-num">04</span>
+                        </div>
+                        <h4 class="matrix-pillar-title">Communication &amp; Languages</h4>
+                        <p class="matrix-pillar-desc">
+                            Fluent in English, Urdu, Hindi, and Punjabi. Comfortable explaining technical reconciliation issues and HMRC queries to non-financial clients and business owners.
+                        </p>
+                        <div class="matrix-tags">
+                            <span>English (Fluent)</span>
+                            <span>Urdu / Hindi / Punjabi</span>
+                            <span>Client Reconciliation</span>
+                            <span>HMRC Liaison</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ INTERACTIVE FINANCIAL & AUDIT LAB (THE SHOWSTOPPER) ═══ -->
+    <section id="financial-lab" class="section financial-lab">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number reveal-up">03</span>
+                <span class="section-label section-label-light reveal-up" style="--delay: 0.1s">Quantitative Practice Sandbox</span>
+                <h2 class="section-title section-title-light reveal-up" style="--delay: 0.2s">Interactive <em>Financial Lab</em></h2>
+                <p class="section-subtitle section-subtitle-light reveal-up" style="--delay: 0.3s">
+                    A DCF model and audit materiality simulator I built to practice corporate finance mechanics and ISA 320 logic — adjust the assumptions below to test the sensitivity.
+                </p>
+            </div>
+
+            <!-- Lab Module Switcher -->
+            <div class="lab-switcher reveal-up" style="--delay: 0.35s">
+                <button class="lab-switch-btn active" id="tab-btn-dcf" data-tab="dcf">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <span>Module A: DCF Valuation Model (Practice &amp; Learning Sandbox)</span>
+                </button>
+                <button class="lab-switch-btn" id="tab-btn-audit" data-tab="audit">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span>Module B: Audit Materiality Simulator (ISA UK 320 Practice)</span>
+                </button>
+            </div>
+
+            <!-- MODULE A: DCF VALUATION & SENSITIVITY ENGINE -->
+            <div class="lab-module-container active" id="module-dcf">
+                <div class="lab-grid">
+                    <!-- Control Inputs Panel -->
+                    <div class="lab-controls-panel">
+                        <div class="panel-header">
+                            <div>
+                                <h3 class="panel-title">Model Assumptions &amp; Drivers</h3>
+                                <p class="panel-desc">Adjust the valuation inputs or trigger preset corporate scenarios.</p>
+                            </div>
+                            <div class="scenario-presets">
+                                <button class="preset-btn" data-preset="bear" title="Conservative Bear Scenario">Bear</button>
+                                <button class="preset-btn active" data-preset="base" title="Base Case Scenario">Base</button>
+                                <button class="preset-btn" data-preset="bull" title="Aggressive Expansion Scenario">Bull</button>
+                            </div>
+                        </div>
+
+                        <!-- Slider 1: Base Revenue -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="input-revenue">Starting Annual Revenue</label>
+                                <span class="slider-val-readout" id="readout-revenue">£10,000,000</span>
+                            </div>
+                            <input type="range" id="input-revenue" class="lab-slider" min="5000000" max="25000000" step="500000" value="10000000">
+                            <div class="slider-ticks">
+                                <span>£5M</span>
+                                <span>£15M</span>
+                                <span>£25M</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 2: Annual Growth -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="input-growth">5-Year Revenue CAGR</label>
+                                <span class="slider-val-readout" id="readout-growth">12%</span>
+                            </div>
+                            <input type="range" id="input-growth" class="lab-slider" min="2" max="30" step="1" value="12">
+                            <div class="slider-ticks">
+                                <span>2%</span>
+                                <span>15%</span>
+                                <span>30%</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 3: EBITDA Margin -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="input-margin">Target EBITDA Margin</label>
+                                <span class="slider-val-readout" id="readout-margin">22%</span>
+                            </div>
+                            <input type="range" id="input-margin" class="lab-slider" min="8" max="40" step="1" value="22">
+                            <div class="slider-ticks">
+                                <span>8%</span>
+                                <span>24%</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 4: WACC / Discount Rate -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="input-wacc">Discount Rate (WACC)</label>
+                                <span class="slider-val-readout" id="readout-wacc">9.5%</span>
+                            </div>
+                            <input type="range" id="input-wacc" class="lab-slider" min="6" max="16" step="0.5" value="9.5">
+                            <div class="slider-ticks">
+                                <span>6%</span>
+                                <span>11%</span>
+                                <span>16%</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider 5: Terminal Multiple -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="input-multiple">Terminal EV/EBITDA Multiple</label>
+                                <span class="slider-val-readout" id="readout-multiple">10.0x</span>
+                            </div>
+                            <input type="range" id="input-multiple" class="lab-slider" min="6" max="18" step="0.5" value="10">
+                            <div class="slider-ticks">
+                                <span>6x</span>
+                                <span>12x</span>
+                                <span>18x</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output & Dynamic Chart Panel -->
+                    <div class="lab-output-panel">
+                        <!-- Key Output Metric Cards -->
+                        <div class="output-cards-grid">
+                            <div class="output-kpi-card highlight-kpi">
+                                <span class="kpi-label">Implied Enterprise Value (EV)</span>
+                                <div class="kpi-number-wrap">
+                                    <span class="kpi-val" id="out-ev">£24.8M</span>
+                                </div>
+                                <span class="kpi-note">NPV of FCF (Yr 1-5) + PV Terminal Value</span>
+                            </div>
+
+                            <div class="output-kpi-card">
+                                <span class="kpi-label">5-Year Cumulative FCF</span>
+                                <div class="kpi-number-wrap">
+                                    <span class="kpi-val" id="out-fcf">£9.1M</span>
+                                </div>
+                                <span class="kpi-note">Cash conversion modelled at 68% EBITDA</span>
+                            </div>
+
+                            <div class="output-kpi-card">
+                                <span class="kpi-label">Year 5 Projected EBITDA</span>
+                                <div class="kpi-number-wrap">
+                                    <span class="kpi-val" id="out-ebitda">£3.88M</span>
+                                </div>
+                                <span class="kpi-note">Yr 5 Target Revenue: <span id="out-y5-rev">£17.6M</span></span>
+                            </div>
+
+                            <div class="output-kpi-card">
+                                <span class="kpi-label">Implied Revenue Multiple</span>
+                                <div class="kpi-number-wrap">
+                                    <span class="kpi-val" id="out-rev-mult">2.48x</span>
+                                </div>
+                                <span class="kpi-note">Enterprise Value / Base Year Revenue</span>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Real-Time Chart Area -->
+                        <div class="chart-box">
+                            <div class="chart-header">
+                                <span class="chart-title">5-Year Free Cash Flow &amp; EBITDA Trajectory</span>
+                                <span class="chart-legend">
+                                    <span class="legend-dot legend-ebitda"></span> EBITDA (£)
+                                    <span class="legend-dot legend-fcf"></span> Free Cash Flow (£)
+                                </span>
+                            </div>
+
+                            <div class="svg-chart-wrapper" id="svg-chart-container">
+                                <svg id="dcf-chart-svg" viewBox="0 0 540 220" preserveAspectRatio="none" aria-label="DCF dynamic trajectory chart"></svg>
+                            </div>
+
+                            <div class="chart-footer-caption">
+                                <span>💡 <em>Methodology:</em> Unlevered DCF using Mid-Year convention, dynamic tax shield, working capital drag, and terminal multiple reconciliation.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODULE B: AUDIT MATERIALITY & ANOMALY DETECTOR -->
+            <div class="lab-module-container" id="module-audit">
+                <div class="lab-grid">
+                    <!-- Audit Parameters -->
+                    <div class="lab-controls-panel">
+                        <div class="panel-header">
+                            <div>
+                                <h3 class="panel-title">ISA (UK) 320 Materiality Setup</h3>
+                                <p class="panel-desc">Set benchmark thresholds for substantive audit analytical review.</p>
+                            </div>
+                            <span class="audit-badge-live">Live Assurance Engine</span>
+                        </div>
+
+                        <!-- Slider: Overall Planning Materiality -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="audit-materiality">Planning Materiality (PM)</label>
+                                <span class="slider-val-readout" id="readout-pm">£75,000</span>
+                            </div>
+                            <input type="range" id="audit-materiality" class="lab-slider" min="25000" max="250000" step="5000" value="75000">
+                            <div class="slider-ticks">
+                                <span>£25k</span>
+                                <span>£125k</span>
+                                <span>£250k</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider: Performance Materiality Ratio -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="audit-perf-pct">Performance Materiality (% of PM)</label>
+                                <span class="slider-val-readout" id="readout-perf">70% (£52.5k)</span>
+                            </div>
+                            <input type="range" id="audit-perf-pct" class="lab-slider" min="50" max="80" step="5" value="70">
+                            <div class="slider-ticks">
+                                <span>50% (High Risk)</span>
+                                <span>65%</span>
+                                <span>80% (Low Risk)</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider: Clearly Trivial Threshold -->
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <label for="audit-trivial">Clearly Trivial Threshold (CTT)</label>
+                                <span class="slider-val-readout" id="readout-ctt">5% (£3,750)</span>
+                            </div>
+                            <input type="range" id="audit-trivial" class="lab-slider" min="2" max="10" step="1" value="5">
+                            <div class="slider-ticks">
+                                <span>2%</span>
+                                <span>5%</span>
+                                <span>10%</span>
+                            </div>
+                        </div>
+
+                        <div class="audit-summary-box">
+                            <div class="audit-summary-item">
+                                <span class="as-label">Engagement Risk Level</span>
+                                <span class="as-val text-accent" id="as-risk-status">Moderate (Standard Substantive Scope)</span>
+                            </div>
+                            <div class="audit-summary-item">
+                                <span class="as-label">Material Anomaly Breaches</span>
+                                <span class="as-val text-red" id="as-flagged-count">2 Accounts Flagged</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Audit Ledger & Anomaly Table -->
+                    <div class="lab-output-panel">
+                        <div class="audit-table-wrapper">
+                            <div class="table-header-row">
+                                <div>
+                                    <h4 class="table-title">Substantive Analytical Review — Trial Balance Sample</h4>
+                                    <p class="table-subtitle">Dynamic variance calculation against Planning &amp; Performance Materiality thresholds.</p>
+                                </div>
+                                <span class="table-tag">Audited Financial Year</span>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="audit-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Account Description</th>
+                                            <th>FY Audited (£)</th>
+                                            <th>Prior FY (£)</th>
+                                            <th>Variance (£)</th>
+                                            <th>Var %</th>
+                                            <th>Audit Status &amp; Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="audit-table-body">
+                                        <!-- Populated via script.js -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="audit-footer-note">
+                                <span>🔍 <em>Assurance Protocol:</em> Transactions with variances exceeding Performance Materiality trigger mandatory substantive testing and management inquiry under ISA (UK) 520.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SERVICES & SPECIALISATIONS ═══ -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number reveal-up">04</span>
+                <span class="section-label section-label-light reveal-up" style="--delay: 0.1s">Practical Focus Areas</span>
+                <h2 class="section-title section-title-light reveal-up" style="--delay: 0.2s">Core Competencies &amp;<br><em>Practical Delivery</em></h2>
+                <p class="section-subtitle section-subtitle-light reveal-up" style="--delay: 0.3s">
+                    Combining unglamorous day-to-day practice precision with modern AI automation and quantitative financial analysis.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal-up" style="--delay: 0.1s" data-tilt data-service="audit" id="service-1">
+                    <span class="service-number">01</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <span class="service-tag">Practice Accounting</span>
+                    <h3 class="service-title">Bookkeeping &amp; Ledger Reconciliations</h3>
+                    <p class="service-desc">
+                        Hands-on bank reconciliations, multi-bank feed matching, and general ledger maintenance on Xero. Ensuring clean, audit-ready numbers across high-volume client accounts.
+                    </p>
+                    <div class="service-meta-tags">
+                        <span>Xero Cloud</span>
+                        <span>Bank Reconciliations</span>
+                        <span>Ledger Hygiene</span>
+                    </div>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-card reveal-up" style="--delay: 0.2s" data-tilt data-service="tax" id="service-2">
+                    <span class="service-number">02</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <span class="service-tag">Tax &amp; Compliance</span>
+                    <h3 class="service-title">MTD VAT Filing &amp; HMRC Liaison</h3>
+                    <p class="service-desc">
+                        Preparing and reviewing VAT returns under Making Tax Digital requirements, handling client correspondence, and resolving queries directly with HMRC.
+                    </p>
+                    <div class="service-meta-tags">
+                        <span>Making Tax Digital</span>
+                        <span>HMRC Correspondence</span>
+                        <span>VAT Submissions</span>
+                    </div>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-card reveal-up" style="--delay: 0.3s" data-tilt data-service="consulting" id="service-3">
+                    <span class="service-number">03</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <span class="service-tag">AI &amp; Automation</span>
+                    <h3 class="service-title">Accounting Automation &amp; AI Workflows</h3>
+                    <p class="service-desc">
+                        Building agentic AI tools with Claude Code to automate repetitive accounting tasks. Eliminated manual categorisation bottlenecks across 30+ live client VAT returns.
+                    </p>
+                    <div class="service-meta-tags">
+                        <span>Claude Code AI</span>
+                        <span>~1 Day/Wk Saved</span>
+                        <span>Process Innovation</span>
+                    </div>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-card reveal-up" style="--delay: 0.4s" data-tilt data-service="deals" id="service-4">
+                    <span class="service-number">04</span>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <span class="service-tag">Corporate Finance &amp; Modelling</span>
+                    <h3 class="service-title">Quantitative Analysis &amp; Valuation Mechanics</h3>
+                    <p class="service-desc">
+                        Self-directed financial modelling exploring DCF sensitivity, discount rates, and corporate valuation mechanics alongside ongoing ACA qualification preparation.
+                    </p>
+                    <div class="service-meta-tags">
+                        <span>DCF Mechanics</span>
+                        <span>Sensitivity Analysis</span>
+                        <span>ACA Preparation</span>
+                    </div>
+                    <div class="service-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SNEAK PEEK: WHAT I'M BUILDING ═══ -->
+    <section id="building" class="section building">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal-up" style="--delay: 0.1s">Sneak Peek</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.2s">What I'm <em>Building</em></h2>
+                <p class="section-subtitle reveal-up" style="--delay: 0.3s">
+                    A working product, a practice model, and a society built from scratch — what I'm building outside of coursework and client ledger work right now.
+                </p>
+            </div>
+
+            <div class="building-grid">
+                <!-- Card 1: In Development -->
+                <div class="building-card reveal-up" style="--delay: 0.1s">
+                    <div class="building-card-top">
+                        <span class="building-status-pill in-dev">In Development</span>
+                        <div class="building-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="building-title">Self Assessment Pro</h3>
+                    <p class="building-tagline">An MTD ITSA-compliant UK tax filing product for self-assessment, built with a co-founder using an AI coding agent.</p>
+                    <p class="building-desc">
+                        Landing page and core UI components are built. Currently working through the pre-launch compliance path — AML supervision under MLR2017, KYC and sandbox testing, and finalising terms and conditions — before any live filing capability goes ahead.
+                    </p>
+                    <div class="building-tech-stack">
+                        <span>Next.js</span>
+                        <span>Antigravity (AI coding agent)</span>
+                        <span>MTD ITSA</span>
+                    </div>
+                    <button class="building-action-btn" id="btn-open-progress-modal" aria-label="View progress on Self Assessment Pro">
+                        <span>View progress</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </div>
+
+                <!-- Card 2: Practice Model -->
+                <div class="building-card reveal-up" style="--delay: 0.2s">
+                    <div class="building-card-top">
+                        <span class="building-status-pill practice-model">Practice Model</span>
+                        <div class="building-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="building-title">DCF &amp; WACC Valuation</h3>
+                    <p class="building-tagline">An interactive discounted cash flow model built to practice valuation mechanics from my coursework.</p>
+                    <p class="building-desc">
+                        Mid-year discounting, a terminal EV/EBITDA multiple, and a simplified capex/working-capital drag, all adjustable live. Built to demonstrate the mechanics, not to value a real business.
+                    </p>
+                    <div class="building-tech-stack">
+                        <span>React</span>
+                        <span>WACC</span>
+                        <span>DCF</span>
+                    </div>
+                    <a href="#financial-lab" class="building-action-btn" aria-label="Open DCF Valuation Model">
+                        <span>Open model</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: Founded & Led -->
+                <div class="building-card reveal-up" style="--delay: 0.3s">
+                    <div class="building-card-top">
+                        <span class="building-status-pill founded-led">Founded &amp; Led</span>
+                        <div class="building-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="building-title">St Mary's Student Investment Society</h3>
+                    <p class="building-tagline">Co-founded and now president of a new student society bringing investing and markets discussion to campus.</p>
+                    <p class="building-desc">
+                        Took it from idea to a running society: wrote the constitution, built the founding presentation, and put together a promotional video script to recruit members. Handled the administrative and university approval side alongside the content.
+                    </p>
+                    <div class="building-tech-stack">
+                        <span>Constitution</span>
+                        <span>Gamma</span>
+                        <span>Member Recruitment</span>
+                    </div>
+                    <button class="building-action-btn btn-open-case-study" data-case="2" aria-label="Read St Mary's Investment Society Story">
+                        <span>Read the story</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PORTFOLIO / CASE STUDIES (WITH INTERACTIVE MODALS) ═══ -->
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <div class="section-header">
+                <div class="portfolio-header-flex">
+                    <div>
+                        <span class="section-number reveal-up">05</span>
+                        <span class="section-label reveal-up" style="--delay: 0.1s">Verifiable Execution</span>
+                        <h2 class="section-title reveal-up" style="--delay: 0.2s">Real-World<br><em>Case Studies</em></h2>
+                    </div>
+
+                    <!-- Filter buttons -->
+                    <div class="portfolio-filter-bar reveal-up" style="--delay: 0.25s">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="automation">AI &amp; Automation</button>
+                        <button class="filter-btn" data-filter="practice">Practice Accounting</button>
+                        <button class="filter-btn" data-filter="leadership">Leadership &amp; Societies</button>
+                        <button class="filter-btn" data-filter="modelling">Financial Modelling</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Case Study 1 -->
+                <article class="project-card reveal-up" style="--delay: 0.1s" data-tilt data-category="automation practice" id="project-1">
+                    <div class="project-visual">
+                        <div class="project-icon-bg">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <span class="project-tag">AI &amp; Automation</span>
+                        <span class="project-badge-result">~1 Day/Wk Saved</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-pretitle">Production Workflow Transformation</div>
+                        <h3 class="project-title">VAT Categorisation Automation — ATCL Accounting</h3>
+                        <p class="project-desc">
+                            Manual VAT categorisation was slow and error-prone across client files. Built an agentic AI workflow with Claude Code to automate categorisation and flagging — now in active use across 30+ client returns.
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-item">Claude Code AI</span>
+                            <span class="meta-item">30+ Client Returns</span>
+                            <span class="meta-item">MTD Compliance</span>
+                        </div>
+                        <button class="btn-open-case-study" data-case="1" aria-label="Read VAT Automation Case Study">
+                            <span>View Detailed Case Study</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Case Study 2 -->
+                <article class="project-card reveal-up" style="--delay: 0.2s" data-tilt data-category="leadership" id="project-2">
+                    <div class="project-visual">
+                        <div class="project-icon-bg">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <span class="project-tag">University Leadership</span>
+                        <span class="project-badge-result">Founded From Scratch</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-pretitle">Student Organisation &amp; Governance</div>
+                        <h3 class="project-title">St Mary's Student Investment Society Launch</h3>
+                        <p class="project-desc">
+                            Founded and currently lead the university's first Student Investment Society. Authored the constitution, built pitch decks on Gamma, produced promo media, and recruited active student members.
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-item">Constitution Author</span>
+                            <span class="meta-item">Gamma Pitch Decks</span>
+                            <span class="meta-item">Campus Recruitment</span>
+                        </div>
+                        <button class="btn-open-case-study" data-case="2" aria-label="Read Investment Society Case Study">
+                            <span>View Detailed Case Study</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Case Study 3 -->
+                <article class="project-card reveal-up" style="--delay: 0.3s" data-tilt data-category="practice" id="project-3">
+                    <div class="project-visual">
+                        <div class="project-icon-bg">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <span class="project-tag">Practice Experience</span>
+                        <span class="project-badge-result">18 Months Practice</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-pretitle">Client Compliance &amp; Reconciliations</div>
+                        <h3 class="project-title">SME Practice Accounting &amp; MTD Compliance</h3>
+                        <p class="project-desc">
+                            Assistant Accountant managing monthly VAT submissions under Making Tax Digital, multi-bank ledger reconciliations on Xero, and resolving client HMRC compliance queries.
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-item">Xero Accounting</span>
+                            <span class="meta-item">Bank Reconciliations</span>
+                            <span class="meta-item">HMRC Liaison</span>
+                        </div>
+                        <button class="btn-open-case-study" data-case="3" aria-label="Read SME Practice Accounting Case Study">
+                            <span>View Detailed Case Study</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Case Study 4 -->
+                <article class="project-card reveal-up" style="--delay: 0.4s" data-tilt data-category="modelling" id="project-4">
+                    <div class="project-visual">
+                        <div class="project-icon-bg">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <span class="project-tag">Financial Modelling</span>
+                        <span class="project-badge-result">Practice Tool</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-pretitle">Quantitative Self-Directed Study</div>
+                        <h3 class="project-title">Dynamic DCF Valuation &amp; Sensitivity Sandbox</h3>
+                        <p class="project-desc">
+                            Engineered an interactive 5-year DCF model to practice valuation mechanics, WACC discounting, mid-year cash flow conventions, and exit multiple sensitivity (featured in the Financial Lab).
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-item">Valuation Mechanics</span>
+                            <span class="meta-item">WACC Sensitivity</span>
+                            <span class="meta-item">Interactive Model</span>
+                        </div>
+                        <button class="btn-open-case-study" data-case="4" aria-label="Read DCF Valuation Sandbox Case Study">
+                            <span>View Detailed Case Study</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ BLOG / COMMERCIAL AWARENESS ═══ -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number reveal-up">06</span>
+                <span class="section-label reveal-up" style="--delay: 0.1s">Commercial Awareness &amp; Insights</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.2s">Thought Leadership &amp;<br><em>Market Commentary</em></h2>
+                <p class="section-subtitle reveal-up" style="--delay: 0.3s">
+                    Demonstrating analytical depth on modern market developments, digital audit transformation, and economic resilience.
+                </p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card reveal-up" style="--delay: 0.1s" id="blog-1">
+                    <div class="blog-card-top">
+                        <span class="blog-number">01</span>
+                        <div class="blog-meta">
+                            <span class="blog-date">15 Jun 2026</span>
+                            <span class="blog-category">Practice Automation &amp; AI</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Automating Accounting: How I Cut VAT Processing Time with Agentic AI</h3>
+                    <p class="blog-excerpt">
+                        How identifying a repetitive manual categorisation bottleneck at my practice led to building a Claude Code workflow that now saves ~1 day of manual work per week across 30+ client returns.
+                    </p>
+                    <button class="blog-read-btn" data-article="1">
+                        <span>Read Commentary</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </article>
+
+                <article class="blog-card reveal-up" style="--delay: 0.2s" id="blog-2">
+                    <div class="blog-card-top">
+                        <span class="blog-number">02</span>
+                        <div class="blog-meta">
+                            <span class="blog-date">02 Jun 2026</span>
+                            <span class="blog-category">Professional Development</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Bridging the Gap: What Balancing Practice Accounting &amp; Degree Studies Teaches You</h3>
+                    <p class="blog-excerpt">
+                        Balancing university study with commercial accounting work taught me that theoretical formulas must be tempered by messy real-world ledger discrepancies, incomplete receipts, and strict MTD deadlines.
+                    </p>
+                    <button class="blog-read-btn" data-article="2">
+                        <span>Read Commentary</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </article>
+
+                <article class="blog-card reveal-up" style="--delay: 0.3s" id="blog-3">
+                    <div class="blog-card-top">
+                        <span class="blog-number">03</span>
+                        <div class="blog-meta">
+                            <span class="blog-date">18 May 2026</span>
+                            <span class="blog-category">Leadership &amp; Initiative</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Founding a University Society: Leadership, Governance, and Pitching From Zero</h3>
+                    <p class="blog-excerpt">
+                        Starting St Mary's Student Investment Society and the Sports &amp; Games Society from scratch — drafting constitutions, presenting on Gamma, and turning student interest into an active community.
+                    </p>
+                    <button class="blog-read-btn" data-article="3">
+                        <span>Read Commentary</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT & RECRUITER OUTREACH ═══ -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number section-number-light reveal-up">07</span>
+                <span class="section-label section-label-light reveal-up" style="--delay: 0.1s">Graduate Recruitment Outreach</span>
+                <h2 class="section-title section-title-light reveal-up" style="--delay: 0.2s">Let's Connect &amp;<br><em>Discuss Opportunities</em></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal-up" style="--delay: 0.3s">
+                    <p class="contact-intro">
+                        Are you a <strong>Graduate Recruiter, Talent Partner, or Practice Manager</strong>? I would welcome an interview, assessment centre invitation, or preliminary conversation regarding September 2027 graduate roles.
+                    </p>
+
+                    <div class="contact-details">
+                        <!-- Direct Email with One-Click Copy -->
+                        <div class="contact-item contact-item-copyable" id="contact-email-copy" title="Click to copy email address">
+                            <div class="contact-item-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Direct Email (Click to Copy)</span>
+                                <span class="contact-item-value" id="email-address-text">zunairnadeem82@gmail.com</span>
+                            </div>
+                            <span class="copy-hint-pill">Copy</span>
+                        </div>
+
+                        <div class="contact-item" id="contact-location">
+                            <div class="contact-item-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Location</span>
+                                <span class="contact-item-value">London, United Kingdom (Open to Relocation)</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" id="contact-availability">
+                            <div class="contact-item-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Recruitment Status</span>
+                                <span class="contact-item-value text-accent">Actively applying for September 2027 graduate intake · Open to practice, mid-tier, and industry roles</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fast Recruiter Action Buttons -->
+                    <div class="recruiter-quick-actions">
+                        <button class="btn-recruiter-action" id="btn-copy-email-bottom">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            <span>Copy Email</span>
+                        </button>
+                        <button class="btn-recruiter-action" id="btn-download-cv-bottom">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <span>Download CV PDF</span>
+                        </button>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/zunair-khawaja-a90779335/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="Connect on LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="mailto:zunairnadeem82@gmail.com" class="social-btn" aria-label="Send Direct Email" title="Send Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Structured Recruitment Contact Form -->
+                <form class="contact-form reveal-up" style="--delay: 0.4s" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="form-name" name="name" class="form-input" placeholder=" " required autocomplete="name">
+                            <label for="form-name" class="form-label">Your Name &amp; Title</label>
+                            <div class="form-line"></div>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="form-email" name="email" class="form-input" placeholder=" " required autocomplete="email">
+                            <label for="form-email" class="form-label">Organisation / Firm Email</label>
+                            <div class="form-line"></div>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="form-company" name="company" class="form-input" placeholder=" " required>
+                            <label for="form-company" class="form-label">Firm / Organisation (e.g. PwC, BDO, Grant Thornton, Industry)</label>
+                            <div class="form-line"></div>
+                            <span class="error-message" id="company-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <select id="form-stream" name="stream" class="form-input form-select" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="Audit &amp; Assurance">Audit &amp; Assurance Graduate Scheme</option>
+                                <option value="Accounts &amp; Business Advisory">Accounts &amp; Business Advisory Scheme</option>
+                                <option value="Tax Advisory &amp; Compliance">Tax Advisory &amp; Compliance Scheme</option>
+                                <option value="Deals &amp; Corporate Finance">Deals / Corporate Finance Scheme</option>
+                                <option value="Commercial Finance / Industry">Commercial Finance / Industry Role</option>
+                            </select>
+                            <label for="form-stream" class="form-label">Service Line / Programme</label>
+                            <div class="form-line"></div>
+                            <span class="error-message" id="stream-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="form-message" name="message" class="form-input form-textarea" placeholder=" " required rows="4"></textarea>
+                        <label for="form-message" class="form-label">Message / Opportunity Details</label>
+                        <div class="form-line"></div>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn-magnetic btn-primary btn-submit" id="form-submit">
+                        <span class="btn-inner">
+                            <span class="btn-text-wrapper"><span class="btn-text">Submit Inquiry</span></span>
+                            <span class="btn-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </span>
+                        </span>
+                    </button>
+
+                    <div class="form-success" id="form-success">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <p>Thank you! Your message has been prepared. We'll be in touch shortly.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">Zunair<br>Khawaja</a>
+                    <p class="footer-tagline">Transforming numbers into narratives &amp; strategies into success.</p>
+                    <span class="footer-status-pill">● Available for Graduate Entry · September 2027</span>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <div class="footer-nav-col">
+                        <span class="footer-nav-heading">Navigation</span>
+                        <a href="#hero" class="footer-link">Home</a>
+                        <a href="#scheme-matcher" class="footer-link">Scheme Matcher</a>
+                        <a href="#about" class="footer-link">About &amp; Matrix</a>
+                        <a href="#financial-lab" class="footer-link">Financial Lab</a>
+                    </div>
+                    <div class="footer-nav-col">
+                        <span class="footer-nav-heading">Portfolio</span>
+                        <a href="#portfolio" class="footer-link">Case Studies</a>
+                        <a href="#blog" class="footer-link">Insights</a>
+                        <a href="#contact" class="footer-link">Recruiter Contact</a>
+                        <a href="https://www.linkedin.com/in/zunair-khawaja-a90779335/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn Profile</a>
+                        <a href="#" id="footer-recruiter-link" class="footer-link text-gold">30s Recruiter Dossier</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Zunair Khawaja. Designed &amp; built for professional graduate recruitment.</p>
+                <a href="#hero" class="back-to-top" aria-label="Back to top">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ RECRUITER FAST-TRACK MODAL (30-SECOND DOSSIER) ═══ -->
+    <div class="modal-backdrop" id="recruiter-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-recruiter-title">
+        <div class="modal-dialog modal-dialog-lg">
+            <button class="modal-close-btn" id="close-recruiter-modal" aria-label="Close modal">✕</button>
+
+            <div class="modal-header">
+                <div class="recruiter-header-badge">Graduate Candidate Dossier</div>
+                <h3 class="modal-title" id="modal-recruiter-title">Zunair Khawaja — Fast-Track Summary</h3>
+                <p class="modal-subtitle">Designed for Graduate Recruitment Teams &amp; Hiring Managers (September 2027 Intake)</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="dossier-grid">
+                    <!-- Quick Specs Table -->
+                    <div class="dossier-card">
+                        <h4 class="dossier-card-title">Candidate Profile &amp; Eligibility</h4>
+                        <table class="dossier-table">
+                            <tr>
+                                <td>Degree</td>
+                                <td><strong>BSc (Hons) Business Management &amp; Finance (Year 3, St Mary's University)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Current Role</td>
+                                <td><strong>Assistant Accountant (18 Months Practice Exp. at ATCL Accounting)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Target Intake</td>
+                                <td><strong>September 2027 Graduate Intake (Audit, Advisory, Tax, Industry)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Professional Exam Track</td>
+                                <td><strong>Committed to ACA (ICAEW) / ACCA qualification (Currently self-studying)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Campus Leadership</td>
+                                <td><strong>Founder &amp; President, St Mary's Student Investment Society</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Geographic Mobility</td>
+                                <td><strong>London &amp; UK Wide (Open to Relocation / Hybrid)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Languages</td>
+                                <td><strong>English (Fluent), Urdu, Hindi, Punjabi</strong></td>
+                            </tr>
+                            <tr>
+                                <td>LinkedIn Profile</td>
+                                <td><a href="https://www.linkedin.com/in/zunair-khawaja-a90779335/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-gold); text-decoration:underline;"><strong>zunair-khawaja-a90779335</strong></a></td>
+                            </tr>
+                            <tr>
+                                <td>Direct Email</td>
+                                <td><strong>zunairnadeem82@gmail.com</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Core Competency Snapshot -->
+                    <div class="dossier-card">
+                        <h4 class="dossier-card-title">Key Differentiators &amp; Demonstrated Value</h4>
+                        <ul class="dossier-list">
+                            <li>
+                                <strong>Real Practice Experience:</strong> 18 months managing live client general ledgers, multi-bank reconciliations, and MTD VAT submissions on Xero.
+                            </li>
+                            <li>
+                                <strong>Demonstrated AI Initiative:</strong> Identified VAT bottleneck and built a Claude Code agentic AI workflow now in active production across 30+ client returns, saving ~1 day of manual work a week.
+                            </li>
+                            <li>
+                                <strong>Leadership Track Record:</strong> Founded and lead two university societies (Investment Society; Sports &amp; Games Society) from concept to active execution — handling constitutions, marketing decks, and recruitment.
+                            </li>
+                            <li>
+                                <strong>Technical Self-Starter:</strong> Built interactive DCF sensitivity models to master corporate valuation mechanics; self-studying for the ACA qualification.
+                            </li>
+                            <li>
+                                <strong>Multilingual Communication:</strong> Fluent in 4 languages; confident explaining technical ledger discrepancies to non-financial clients.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dossier-tech-stack">
+                    <span class="tech-stack-title">Verified Technical &amp; Systems Toolkit:</span>
+                    <div class="tech-stack-pills">
+                        <span>Xero Cloud Accounting</span>
+                        <span>Making Tax Digital (MTD)</span>
+                        <span>Claude Code AI Workflows</span>
+                        <span>Bank Reconciliation</span>
+                        <span>Excel (Formulas &amp; Pivot Tables)</span>
+                        <span>Gamma Investor Decks</span>
+                        <span>HMRC Client Correspondence</span>
+                        <span>DCF Valuation Sandbox</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-primary-modal" id="modal-download-cv">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>Download CV / Resume (PDF)</span>
+                </button>
+                <a href="https://www.linkedin.com/in/zunair-khawaja-a90779335/" target="_blank" rel="noopener noreferrer" class="btn-secondary-modal" id="modal-view-linkedin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <span>View LinkedIn</span>
+                </a>
+                <button class="btn-secondary-modal" id="modal-copy-email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy Direct Email</span>
+                </button>
+                <button class="btn-secondary-modal" id="modal-print-view">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                    <span>Print Clean Dossier</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ INTERACTIVE CASE STUDY MODAL ═══ -->
+    <div class="modal-backdrop" id="case-study-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cs-modal-title">
+        <div class="modal-dialog modal-dialog-lg">
+            <button class="modal-close-btn" id="close-case-modal" aria-label="Close case study modal">✕</button>
+
+            <div class="modal-header">
+                <span class="recruiter-header-badge" id="cs-modal-category">Deals &amp; Corporate Finance</span>
+                <h3 class="modal-title" id="cs-modal-title">Case Study Title</h3>
+                <p class="modal-subtitle" id="cs-modal-subtitle">Project Subtitle</p>
+            </div>
+
+            <div class="modal-body" id="cs-modal-body">
+                <!-- Dynamically injected via script.js -->
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-secondary-modal" id="cs-close-btn">Close Case Study</button>
+                <a href="#contact" class="btn-primary-modal" id="cs-discuss-btn">Discuss This Project With Zunair</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ INTERACTIVE ARTICLE / COMMENTARY MODAL ═══ -->
+    <div class="modal-backdrop" id="article-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="art-modal-title">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="close-article-modal" aria-label="Close article modal">✕</button>
+
+            <div class="modal-header">
+                <span class="recruiter-header-badge" id="art-modal-category">Commercial Awareness</span>
+                <h3 class="modal-title" id="art-modal-title">Article Title</h3>
+                <p class="modal-subtitle" id="art-modal-date">Publication Date</p>
+            </div>
+
+            <div class="modal-body" id="art-modal-body">
+                <!-- Dynamically injected via script.js -->
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-secondary-modal" id="art-close-btn">Close Article</button>
+                <a href="#contact" class="btn-primary-modal">Contact Candidate</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ PRODUCT PROGRESS MODAL (SELF ASSESSMENT PRO) ═══ -->
+    <div class="modal-backdrop" id="progress-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="prog-modal-title">
+        <div class="modal-dialog modal-dialog-lg">
+            <button class="modal-close-btn" id="close-progress-modal" aria-label="Close modal">✕</button>
+
+            <div class="modal-header">
+                <span class="recruiter-header-badge" style="background:rgba(52,152,219,0.15); color:#3498DB; border-color:rgba(52,152,219,0.3);">Product in Development · Tax Tech</span>
+                <h3 class="modal-title" id="prog-modal-title">Self Assessment Pro</h3>
+                <p class="modal-subtitle">MTD ITSA-Compliant UK Tax Filing Platform Built with AI Assistance</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="cs-detail-section" style="background:var(--bg-card-dark); border:1px solid var(--border-card-dark); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+                    <h4 class="cs-section-heading" style="color:var(--accent-gold); margin-bottom:6px;">Product Vision &amp; Market Need</h4>
+                    <p class="cs-section-text" style="color:var(--text-light); line-height:1.7;">
+                        Making Tax Digital for Income Tax Self Assessment (MTD ITSA) is set to reshape UK tax filing, mandating quarterly digital submissions for sole traders and landlords. Built with a co-founder using Antigravity (an AI coding agent), <strong>Self Assessment Pro</strong> is engineered to eliminate the stress of manual tax calculations, bookkeeping spreadsheets, and complex government forms for micro-businesses.
+                    </p>
+                </div>
+
+                <div class="cs-detail-section" style="margin-bottom:1.5rem;">
+                    <h4 class="cs-section-heading" style="color:var(--accent-gold); margin-bottom:6px;">Current Build Status</h4>
+                    <p class="cs-section-text" style="color:var(--text-muted); line-height:1.7;">
+                        Landing page and core UI components are built in Next.js. Currently working through the pre-launch compliance path — AML supervision under MLR2017, KYC and sandbox testing, and finalising terms and conditions — before any live filing capability goes ahead.
+                    </p>
+                </div>
+
+                <div class="cs-metrics-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 1.5rem;">
+                    <div class="cs-metric-card">
+                        <span class="cs-metric-val" style="color:#3498DB;">Next.js</span>
+                        <span class="cs-metric-lbl">Modern React Architecture</span>
+                    </div>
+                    <div class="cs-metric-card">
+                        <span class="cs-metric-val" style="color:var(--accent-gold);">Antigravity</span>
+                        <span class="cs-metric-lbl">AI Coding Agent Workflow</span>
+                    </div>
+                    <div class="cs-metric-card">
+                        <span class="cs-metric-val" style="color:#2ECC71;">MTD ITSA</span>
+                        <span class="cs-metric-lbl">HMRC Digital Compliance</span>
+                    </div>
+                </div>
+
+                <div class="cs-detail-section" style="background:var(--bg-card-dark); border:1px solid var(--border-card-dark); border-radius:14px; padding:1.25rem;">
+                    <h4 class="cs-section-heading" style="color:var(--accent-gold); margin-bottom:10px;">Pre-Launch Regulatory &amp; Compliance Pathway</h4>
+                    <ul class="dossier-list" style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;">
+                        <li>
+                            <strong style="color:var(--text-light);">AML Supervision (MLR2017):</strong> Preparing registration for Anti-Money Laundering supervision under the Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017.
+                        </li>
+                        <li>
+                            <strong style="color:var(--text-light);">KYC &amp; Identity Verification:</strong> Designing customer due diligence workflows to verify taxpayer identities and establish audit trails prior to submission.
+                        </li>
+                        <li>
+                            <strong style="color:var(--text-light);">HMRC Developer Sandbox Testing:</strong> Connecting with HMRC's Developer Hub sandbox environments to validate quarterly update payloads and end-of-period statements (EOPS).
+                        </li>
+                        <li>
+                            <strong style="color:var(--text-light);">Legal Terms &amp; Conditions:</strong> Drafting strict terms of service, client confidentiality protocols, and statutory disclaimer structures.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-secondary-modal" id="prog-close-btn">Close Window</button>
+                <a href="#contact" class="btn-primary-modal">Contact Zunair About This Project</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
