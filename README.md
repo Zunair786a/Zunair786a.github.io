@@ -1,7 +1,7 @@
 # Zunair Khawaja — Professional Portfolio & Financial Lab
 
 > Assistant Accountant · BSc Business Management & Finance · ACA Track  
-> Live Website: [https://zunair.me](https://zunair.me) (or [https://zunair786a.github.io](https://zunair786a.github.io))
+> Live Website:  (or [https://zunair786a.github.io](https://zunair786a.github.io))
 
 ---
 
