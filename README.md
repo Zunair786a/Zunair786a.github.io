@@ -1,7 +1,7 @@
 # Zunair Khawaja — Professional Portfolio & Financial Lab
 
-> Assistant Accountant · BSc Business Management & Finance · ACA Track  
-> Live Website:  (or [https://zunair786a.github.io](https://zunair786a.github.io))
+> Junior Accountant · BSc Business Management & Finance · ACA Track  
+> Live Website: [https://zunair786a.github.io](https://zunair786a.github.io)
 
 ---
 
@@ -9,7 +9,7 @@
 
 I turn messy client ledgers into clean, audit-ready numbers — and I build the tools that do it faster. Currently automating VAT compliance workflows with agentic AI at a UK accounting practice while completing Year 3 of my degree and self-studying for the ACA (ICAEW).
 
-- **18 Months Practice Experience**: Part-time Assistant Accountant at ATCL Accounting (Xero, Making Tax Digital VAT filings, bank reconciliations, HMRC liaison).
+- **18 Months Practice Experience**: Part-time Junior Accountant at ATCL Accounting (Xero, Making Tax Digital VAT filings, bank reconciliations, HMRC liaison).
 - **Process Automation**: Designed and deployed agentic AI workflows with Claude Code in production across 30+ client returns, saving ~1 day per week.
 - **Campus Leadership**: Founder & President of St Mary's Student Investment Society and Sports & Games Society.
 - **Targeting**: September 2027 Graduate Intake across practice, mid-tier, and industry advisory streams.

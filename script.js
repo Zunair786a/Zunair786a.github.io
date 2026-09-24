@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
             score: "98",
             highlights: [
                 "Targeting September 2027 Graduate Intake (Open to Practice, Mid-Tier & Industry)",
-                "18 Months Assistant Accountant practice experience + 30+ client VAT returns automated",
+                "18 Months Junior Accountant practice experience + 30+ client VAT returns automated",
                 "Committed to ACA (ICAEW) qualification · Active self-study track"
             ],
             primaryAction: "Explore Financial Lab",
@@ -994,7 +994,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         3: {
             title: "SME Practice Accounting & MTD Compliance — ATCL Accounting",
-            category: "Practice Experience · Assistant Accountant",
+            category: "Practice Experience · Junior Accountant",
             subtitle: "Client Bookkeeping, Bank Recs & HMRC Liaison",
             challenge: "Managing compliance and reconciliation for diverse SME client files with messy bank feeds, missing purchase invoices, and strict statutory VAT submission deadlines under HMRC's Making Tax Digital rules.",
             methodology: "Executed end-to-end bank reconciliations on Xero, investigated unallocated ledger entries, prepared quarterly VAT submissions, and drafted formal correspondence to resolve client compliance inquiries with HMRC.",
@@ -1094,7 +1094,7 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <p>In university lecture theatres, trial balances always balance, inventory ledgers are pristine, and exam questions provide unambiguous facts. Entering practice accounting quickly dispels those comfortable assumptions.</p>
                 <h4 style="color:var(--accent-gold); margin:1.25rem 0 0.5rem; font-family:var(--font-heading);">The Reality of Messy Data</h4>
-                <p>Over the past 18 months as an Assistant Accountant at ATCL Accounting, I have navigated incomplete client bank statements, unallocated ledger transactions, and strict HMRC quarterly filing deadlines. This work has built resilience, meticulous attention to detail, and professional skepticism.</p>
+                <p>Over the past 18 months as a Junior Accountant at ATCL Accounting, I have navigated incomplete client bank statements, unallocated ledger transactions, and strict HMRC quarterly filing deadlines. This work has built resilience, meticulous attention to detail, and professional skepticism.</p>
                 <h4 style="color:var(--accent-gold); margin:1.25rem 0 0.5rem; font-family:var(--font-heading);">Preparation for the ACA Track</h4>
                 <p>Balancing degree studies with commercial responsibilities has forced me to master time management and rapid context switching — direct preparation for tackling the ICAEW ACA examinations while serving client engagements on a graduate scheme.</p>
             `
