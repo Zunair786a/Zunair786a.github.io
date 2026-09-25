@@ -145,10 +145,23 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            const targetEl = document.querySelector(targetId);
-            if (targetEl) {
+
+            // Auto-activate corresponding Financial Lab module if targeted
+            if (targetId === '#module-audit') {
+                const auditBtn = document.getElementById('tab-btn-audit');
+                if (auditBtn) auditBtn.click();
+            } else if (targetId === '#module-dcf') {
+                const dcfBtn = document.getElementById('tab-btn-dcf');
+                if (dcfBtn) dcfBtn.click();
+            }
+
+            const scrollTarget = (targetId === '#module-audit' || targetId === '#module-dcf')
+                ? document.getElementById('financial-lab')
+                : document.querySelector(targetId);
+
+            if (scrollTarget) {
                 e.preventDefault();
-                const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - 80;
+                const targetPos = scrollTarget.getBoundingClientRect().top + window.scrollY - 80;
                 window.scrollTo({ top: targetPos, behavior: 'smooth' });
                 closeMobileMenu();
             }
@@ -457,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             primaryAction: "Inspect Live Audit Lab",
             primaryTarget: "#module-audit",
-            secondaryAction: "View Practice Case Study"
+            secondaryAction: "30s Recruiter Dossier"
         },
         deals: {
             tag: "Corporate Finance & Quantitative Analysis",
@@ -471,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             primaryAction: "Run Live DCF Model",
             primaryTarget: "#module-dcf",
-            secondaryAction: "View Society Case Study"
+            secondaryAction: "30s Recruiter Dossier"
         },
         tax: {
             tag: "Tax Compliance & Advisory (VAT / MTD / HMRC)",
@@ -485,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             primaryAction: "View VAT Case Study",
             primaryTarget: "#project-1",
-            secondaryAction: "Read Automation Article"
+            secondaryAction: "30s Recruiter Dossier"
         },
         consulting: {
             tag: "Digital Finance, Automation & Advisory",
@@ -499,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             primaryAction: "View Automation Case Study",
             primaryTarget: "#project-1",
-            secondaryAction: "Discuss With Zunair"
+            secondaryAction: "30s Recruiter Dossier"
         }
     };
 
